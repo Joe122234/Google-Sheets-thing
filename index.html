@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Business Tracker</h2>
+        <div class="form-container">
+            <h3>Add Revenue</h3>
+            <select id="product">
+                <!-- Options for products will be dynamically added via JavaScript -->
+            </select>
+            <input type="number" id="quantity" placeholder="Quantity">
+            <input type="number" id="price" step="0.01" placeholder="Price">
+            <button onclick="addRevenue()">Add Revenue</button>
+        </div>
+        <div class="form-container">
+            <h3>Add Expense</h3>
+            <input type="text" id="expense_type" placeholder="Expense Type">
+            <input type="text" id="description" placeholder="Description">
+            <input type="number" id="amount" step="0.01" placeholder="Amount">
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+        <div class="totals-container">
+            <p id="totalRevenue"></p>
+            <p id="totalExpense"></p>
+            <p id="totalProfit"></p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Amount ($)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="dataBody">
+                <!-- Table rows will be added dynamically -->
+            </tbody>
+        </table>
+        <div class="button-container">
+            <button onclick="deleteAllRows()">Delete All</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
